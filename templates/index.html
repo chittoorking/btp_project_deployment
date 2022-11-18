@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Anomaly Prediction</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body style="background: #000;">
+ <div class="login">
+	<h1>Anomaly Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+      <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="P_j1_t" placeholder="P_j1_t" required="required" />
+      <input type="text" name="P_j2_t" placeholder="P_j2_t" required="required" />
+      <input type="text" name="P_j3_t" placeholder="P_j3_t" required="required" />
+      <input type="text" name="P_j4_t" placeholder="P_j4_t" required="required" />
+      <input type="text" name="P_j5_t" placeholder="P_j5_t" required="required" />
+      <input type="text" name="P_j6_t" placeholder="P_j6_t" required="required" />
+      <input type="text" name="P_j7_t" placeholder="P_j7_t" required="required" />
+      <input type="text" name="V_j1_t" placeholder="V_j1_t" required="required" />
+      <input type="text" name="V_j2_t" placeholder="V_j2_t" required="required" />
+      <input type="text" name="V_j3_t" placeholder="V_j3_t" required="required" />
+      <input type="text" name="V_j4_t" placeholder="V_j4_t" required="required" />
+      <input type="text" name="V_j5_t" placeholder="V_j5_t" required="required" />
+      <input type="text" name="V_j6_t" placeholder="V_j6_t" required="required" />
+      <input type="text" name="V_j7_t" placeholder="V_j7_t" required="required" />
+      <input type="text" name="T_j1_t" placeholder="T_j1_t" required="required" />
+      <input type="text" name="T_j2_t" placeholder="T_j2_t" required="required" />
+      <input type="text" name="T_j3_t" placeholder="T_j3_t" required="required" />
+      <input type="text" name="T_j4_t" placeholder="T_j4_t" required="required" />
+      <input type="text" name="T_j5_t" placeholder="T_j5_t" required="required" />
+      <input type="text" name="T_j6_t" placeholder="T_j6_t" required="required" />
+      <input type="text" name="T_j7_t" placeholder="T_j7_t" required="required" />
+      <!-- # pca_np=np.array([P_j1_t,P_j2_t,P_j3_t,P_j4_t,P_j5_t,P_j6_t,P_j7_t,V_j1_t,V_j2_t,V_j3_t,V_j4_t,V_j5_t,V_j6_t,V_j7_t,T_j1_t,T_j2_t,T_j3_t,T_j4_t,T_j5_t,T_j6_t,T_j7_t]).reshape(1,21).astype(np.float64) -->
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict Anomaly</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
