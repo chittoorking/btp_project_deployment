@@ -18,7 +18,26 @@ The code from data collection to the model building is present in the ipynb note
 # BTP Deployment
 
 - First, using the Flask a simple Web Application was made.
-- Downloaded a ubuntu virtual machine and installed docker using official documentation
+- Download a ubuntu virtual machine and install docker using official documentation
+- Setup Docker Daemon
+- Go to project folder where Dockerfile is present. Dockerfile is used for building of the docker image.
+- In my case it it btp_project_deployment
+- Use the below command for build the docker image
+```bash
+docker build -t <name> .
+```
+- Use the following command for viewing all the docker images
+```bash
+docker images
+```
+- Run the docker container using the below command
+```bash
+docker run -d -p 5000:5000 <name>
+```
+- Open the flask app running on port 5000 in any web browser available
+```bash
+localhost:5000/predict
+```
 - Used Docker to run the project.
 ```bash
 docker build -t <name> . # This is the command to build the docker image from the Dockerfile.
