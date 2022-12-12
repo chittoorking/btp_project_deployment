@@ -1,6 +1,6 @@
 # BTP Deployment
 
-- First, using the flash a simple Web Application was made.
+- First, using the Flask a simple Web Application was made.
 - Used Docker to run the project.
 ```bash
 docker build -t <name> . # This is the command to build the docker image from the Dockerfile.
