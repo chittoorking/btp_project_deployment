@@ -1,6 +1,7 @@
 # About the Project
 ## The Project is Digital Twin Manufacturing using data analytics
 The code from data collection to the model building is present in the ipynb notebook in the Python code folder
+
 ### Walk through of the notebook
 - We imported the necessary libraries
 - Mount to the google drive 
@@ -15,8 +16,16 @@ The code from data collection to the model building is present in the ipynb note
 - Model building for detecting anomaly along with addressing class imbalance problem
 - Select the best model in terms of accuracy and F1 score( Decision Tree Classifier)
 - Link to previous deployment on streamlit
-# Deployment using Docker
 
+### Files in the current folder
+- Dockerfile is the final Docker image 
+- app.py is the Flask application built
+- templates folder and static/css folders contains the html and css files related to the Flask application
+- clf_model is the DecisiontTree classification model
+- model.h5 and model.json are the model weights of ANN model built for predicting final positions and velocities in h5 and json format respectively
+- requirements.txt file is the libraries that will be installed during docker deployment
+
+# Deployment using Docker
 - First, using the Flask a simple Web Application was made.
 - Download a ubuntu virtual machine and install docker using official documentation
 - Setup Docker Daemon
