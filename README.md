@@ -15,7 +15,7 @@ The code from data collection to the model building is present in the ipynb note
 - Model building for detecting anomaly along with addressing class imbalance problem
 - Select the best model in terms of accuracy and F1 score( Decision Tree Classifier)
 - Link to previous deployment on streamlit
-# BTP Deployment
+# Deployment using Docker
 
 - First, using the Flask a simple Web Application was made.
 - Download a ubuntu virtual machine and install docker using official documentation
@@ -44,11 +44,11 @@ localhost:5000
 ```bash 
 docker ps
 ```
-- stop the docker container from running by using
+- Stop the docker container from running by using
 ```bash 
 docker stop <id>
 ```
-- delete the image by using the following command
+- Delete the image by using the following command
 ```bash
 docker image rm -f <image name>
 ```
