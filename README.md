@@ -36,10 +36,20 @@ docker run -d -p 5000:5000 <name>
 ```
 - Open the flask app running on port 5000 in any web browser available
 ```bash
-localhost:5000/predict
+localhost:5000
 ```
-- Used Docker to run the project.
+- Give the inputs and click on predict and the app will run the model and predict if there is any anomaly or not 
+- 1 indicate anomaly and 0 indicate no anomaly
+- We can know which docker containers are running using
+```bash 
+docker ps
+```
+- stop the docker container from running by using
+```bash 
+docker stop <id>
+```
+- delete the image by using the following command
 ```bash
-docker build -t <name> . # This is the command to build the docker image from the Dockerfile.
-docker run -d -p 5000:5000 <name> # To run the application in docker container.
+docker image rm -f <image name>
 ```
+
