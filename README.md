@@ -18,6 +18,7 @@ The code from data collection to the model building is present in the ipynb note
 # BTP Deployment
 
 - First, using the Flask a simple Web Application was made.
+- Downloaded a ubuntu virtual machine and installed docker using official documentation
 - Used Docker to run the project.
 ```bash
 docker build -t <name> . # This is the command to build the docker image from the Dockerfile.
